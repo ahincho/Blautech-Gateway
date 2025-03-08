@@ -8,6 +8,8 @@ spring:
           uri: lb://PRODUCTS-MICROSERVICE
           predicates:
             - Path=/api/v1/products/**
+          filters:
+            - AuthFilter
 eureka:
   client:
     service-url:
